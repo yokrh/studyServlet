@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1">
+
+  <servlet>
+    <servlet-name>Sample1</servlet-name>
+    <servlet-class>Sample1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sample1</servlet-name>
+    <url-pattern>/Sample1</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Sample2</servlet-name>
+    <servlet-class>Sample2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sample2</servlet-name>
+    <url-pattern>/Sample2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Sample3</servlet-name>
+    <servlet-class>Sample3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sample3</servlet-name>
+    <url-pattern>/Sample3</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RedirectSample</servlet-name>
+    <servlet-class>RedirectSample</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RedirectSample</servlet-name>
+    <url-pattern>/RedirectSample</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RedirectSample</servlet-name>
+    <url-pattern>*.gif</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Request</servlet-name>
+    <servlet-class>RequestSample1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Request</servlet-name>
+    <url-pattern>/RequestSample</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ShowURI</servlet-name>
+    <servlet-class>ShowURI</servlet-class>
+    <init-param>
+      <param-name>param-name1</param-name>
+      <param-value>111</param-value>
+    </init-param>
+    <init-param>
+      <param-name>param-name2</param-name>
+      <param-value>222</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowURI</servlet-name>
+    <url-pattern>/ShowURI/*</url-pattern>
+  </servlet-mapping>
+
+  <!--
+  <servlet>
+    <servlet-name>DefaultMapping</servlet-name>
+    <servlet-class>ShowURI</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DefaultMapping</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  -->
+  
+  <servlet>
+    <servlet-name>CookieTest</servlet-name>
+    <servlet-class>CookieTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CookieTest</servlet-name>
+    <url-pattern>/CookieTest</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CookieTestRedirect</servlet-name>
+    <servlet-class>CookieTestRedirect</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CookieTestRedirect</servlet-name>
+    <url-pattern>/CookieTest/Redirect</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>SessionTest</servlet-name>
+    <servlet-class>SessionTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionTest</servlet-name>
+    <url-pattern>/SessionTest</url-pattern>
+  </servlet-mapping>
+  <!-- セッション持続時間の設定（分単位. default:30min） -->
+  <session-config>
+    <session-timeout>1</session-timeout>
+  </session-config>
+
+</web-app>
